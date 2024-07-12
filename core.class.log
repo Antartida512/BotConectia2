@@ -1,0 +1,282 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5491139001214@s.whatsapp.net',
+    fromMe: false,
+    id: '3AA8C405C1AE3E3ED8DA',
+    participant: undefined
+  },
+  messageTimestamp: 1720798666,
+  pushName: 'Nachi',
+  broadcast: false,
+  message: Message {
+    conversation: 'hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'hola',
+  from: '5491139001214'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  keyword: 'key_0e873a4f-623a-44b1-8114-fa51070f4a51',
+  answer: '🙌*Hola mi nombre es Juana, soy la asistente virtual de Conectia estoy aca para brindarte la mejor atención*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '8d556265183ed0d003776e4f266b6332'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_64add9b5-214a-4164-b866-c0cb7f02e450',
+  keyword: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  answer: 'Por favor ¿nos podrías compartir tu correo electrónico?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '938530275310b2dd862107ef02d3dedd'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_680200f3-0940-48f8-82fd-3e3d9c28bcc1',
+  keyword: 'ans_64add9b5-214a-4164-b866-c0cb7f02e450',
+  answer: 'Escribí *Menu* para avanzar',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '75b39bc15dbbdc1248c86cd969fe81ea'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492571938@s.whatsapp.net',
+    fromMe: false,
+    id: '8284CABB06E989D5BC7E8F3D50DB3906',
+    participant: undefined
+  },
+  messageTimestamp: 1720798677,
+  pushName: 'Paola',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '¿Me enviarían más detalles?',
+      canonicalUrl: 'https://fb.me/20aUXFvot',
+      description: ' ',
+      title: 'Chatea con nosotros',
+      previewType: 0,
+      jpegThumbnail: [Uint8Array],
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: '¿Me enviarían más detalles?',
+  from: '5493492571938'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  keyword: 'key_0e873a4f-623a-44b1-8114-fa51070f4a51',
+  answer: '🙌*Hola mi nombre es Juana, soy la asistente virtual de Conectia estoy aca para brindarte la mejor atención*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '8d556265183ed0d003776e4f266b6332'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5491139001214@s.whatsapp.net',
+    fromMe: false,
+    id: '3AFB0BD6A79EE17ED67B',
+    participant: undefined
+  },
+  messageTimestamp: 1720798678,
+  pushName: 'Nachi',
+  broadcast: false,
+  message: Message {
+    conversation: 'Menu',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Menu',
+  from: '5491139001214'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_76d3aad2-20c7-499c-bb8c-8d3423c5f071',
+  keyword: 'key_ae74b525-7b23-429e-b602-db5f248f9fe7',
+  answer: 'A continuación, escribe el numero de la opción deseada:\r\n' +
+    '\r\n' +
+    '*1*- 🏗️ Informacion General (Fecha de entrega, descripcion )\r\n' +
+    '*2*- 💵 Precios y Financiamiento\r\n' +
+    '*3*- 🏊🏻 Ameneties\r\n' +
+    '*4*- 📄 Brochure\r\n' +
+    '*5*- 📏 Tipologias\r\n' +
+    '*6*- 🗺️ Ubicacion, accesibilidad y etorno\r\n' +
+    '*7*- 🙋🏻‍♀️ Agenda una reunion\r\n' +
+    '\r\n' +
+    '*0*- Salir',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'f1fa86c44321b1215ab26bb845ed2759'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_64add9b5-214a-4164-b866-c0cb7f02e450',
+  keyword: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  answer: 'Por favor ¿nos podrías compartir tu correo electrónico?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '938530275310b2dd862107ef02d3dedd'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_680200f3-0940-48f8-82fd-3e3d9c28bcc1',
+  keyword: 'ans_64add9b5-214a-4164-b866-c0cb7f02e450',
+  answer: 'Escribí *Menu* para avanzar',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '75b39bc15dbbdc1248c86cd969fe81ea'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5491139001214@s.whatsapp.net',
+    fromMe: false,
+    id: '3AF19E32F931BD240003',
+    participant: undefined
+  },
+  messageTimestamp: 1720798690,
+  pushName: 'Nachi',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '5491139001214'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493492571938@s.whatsapp.net',
+    fromMe: false,
+    id: 'D70BAF315C68819BF4B7C79CB042A1DC',
+    participant: undefined
+  },
+  messageTimestamp: 1720798694,
+  pushName: 'Paola',
+  broadcast: false,
+  message: Message {
+    conversation: 'Dónde es? Más fotos y barrio.',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Dónde es? Más fotos y barrio.',
+  from: '5493492571938'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  keyword: 'key_0e873a4f-623a-44b1-8114-fa51070f4a51',
+  answer: '🙌*Hola mi nombre es Juana, soy la asistente virtual de Conectia estoy aca para brindarte la mejor atención*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '8d556265183ed0d003776e4f266b6332'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_64add9b5-214a-4164-b866-c0cb7f02e450',
+  keyword: 'ans_20cd1698-1cef-488a-81ae-65aab767303f',
+  answer: 'Por favor ¿nos podrías compartir tu correo electrónico?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 3000,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '938530275310b2dd862107ef02d3dedd'
+}

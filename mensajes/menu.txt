@@ -1,0 +1,11 @@
+A continuación, escribe el numero de la opción deseada:
+
+*1*- 🏗️ Informacion General (Fecha de entrega, descripcion )
+*2*- 💵 Precios y Financiamiento
+*3*- 🏊🏻 Ameneties
+*4*- 📄 Brochure
+*5*- 📏 Tipologias
+*6*- 🗺️ Ubicacion, accesibilidad y etorno
+*7*- 🙋🏻‍♀️ Agenda una reunion
+
+*0*- Salir
