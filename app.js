@@ -33,8 +33,29 @@ async function connectToDatabase() {
     return client.db('BaseTest');
 }
 
-// MENU
-const menuFlow = addKeyword("Menu, Menú").addAnswer(
+// Flujos de conversación
+const flowCaptureEmail = addKeyword('CAPTURE_EMAIL')
+    .addAnswer('Por favor, ¿nos podrías compartir tu correo electrónico?', { capture: true }, async (ctx, { flowDynamic, gotoFlow }) => {
+        const email = ctx.body.trim();
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            const db = await connectToDatabase();
+            await db.collection('usuarios').insertOne({ email });
+            await flowDynamic('¡Gracias! Ahora puedes ver el *Menú*');
+            return gotoFlow(menuFlow); // Volver al menú principal después de capturar el correo electrónico
+        } else {
+            await flowDynamic('Correo electrónico no válido. Por favor, ingresa un correo electrónico válido.');
+            return gotoFlow(flowCaptureEmail); // Volver a pedir el correo electrónico si es inválido
+        }
+    });
+
+const flowWelcome = addKeyword(EVENTS.WELCOME)
+    .addAnswer('🙌 Hola mi nombre es Juana, soy la asistente virtual de Conectia. Estoy aquí para brindarte la mejor atención.')
+    .addAnswer('Por favor, ¿nos podrías decir tu nombre?', { capture: true }, async (ctx, { gotoFlow }) => {
+        return gotoFlow(flowCaptureEmail);
+    });
+
+// Flujo del menú principal
+const menuFlow = addKeyword("Menu").addAnswer(
     menu,
     { capture: true },
     async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
@@ -59,31 +80,10 @@ const menuFlow = addKeyword("Menu, Menú").addAnswer(
             case "7":
                 return gotoFlow(flowReservar);
             case "0":
-                await flowDynamic("Muchas gracias por su consulta!");
-                return;
+                return await flowDynamic("Muchas gracias por su consulta. Saliendo...");
         }
     }
 );
-
-// Modificación del flujo de bienvenida para capturar el correo electrónico
-const flowCaptureEmail = addKeyword('CAPTURE_EMAIL')
-    .addAnswer('Por favor, ¿nos podrías compartir tu correo electrónico?', { capture: true }, async (ctx, { flowDynamic, gotoFlow }) => {
-        const email = ctx.body.trim();
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            const db = await connectToDatabase();
-            await db.collection('usuarios').insertOne({ email });
-            await flowDynamic('¡Gracias! Ahora puedes escribir *Menu* para continuar.');
-        } else {
-            await flowDynamic('Correo electrónico no válido. Por favor, ingresa un correo electrónico válido.');
-            return gotoFlow(flowCaptureEmail); // Volver a pedir el correo electrónico si es inválido
-        }
-    });
-
-const flowWelcome = addKeyword(EVENTS.WELCOME)
-    .addAnswer('🙌 Hola mi nombre es Juana, soy la asistente virtual de Conectia, estoy aquí para brindarte la mejor atención.')
-    .addAnswer('Por favor, ¿nos podrías indicar tu nombre?', { capture: true }, async (ctx, { gotoFlow }) => {
-        return gotoFlow(flowCaptureEmail);
-    });
 
 const flowInfo = addKeyword(EVENTS.ACTION)
     .addAnswer('Seleccionaste "Información General". A continuación te brindo los detalles:')
@@ -163,4 +163,3 @@ const main = async () => {
 }
 
 main();
-
